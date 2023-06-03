@@ -1,9 +1,12 @@
 version: "2"
 authtoken: <add_your_token_here>
 tunnels:
-    web:
-        proto: http
-        addr: 80
-    ssh:
-        proto: tcp
-        addr: 22
+  website:
+    addr: 5000
+    subdomain: <mbid>.mosquitobusters
+    proto: http
+
+  ssh-access:
+    addr: 22
+    proto: tcp
+    remote_addr: 3.tcp.eu.ngrok.io:28797
