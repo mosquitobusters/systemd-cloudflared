@@ -3,7 +3,7 @@ authtoken: <add_your_token_here>
 tunnels:
   website:
     addr: 5000
-    subdomain: <mbid>.mosquitobusters
+    subdomain: mosquitobusters
     proto: http
 
   ssh-access:
