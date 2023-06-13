@@ -6,8 +6,3 @@ tunnels:
     addr: 5000
     domain: mosquitobusters.ngrok.io
     proto: http
-
-  ssh-access:
-    addr: 22
-    proto: tcp
-    remote_addr: 3.tcp.us.ngrok.io:28797
