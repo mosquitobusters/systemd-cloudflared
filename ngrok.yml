@@ -4,5 +4,6 @@ region: us
 tunnels:
   website:
     addr: 5000
+    subdomain: <mbid>
     domain: '*.mosquitobusters.ngrok.app'
     proto: http
