@@ -6,3 +6,7 @@ tunnels:
     addr: 5000
     domain: '<mbid>.mosquitobusters.ngrok.app'
     proto: http
+  ssh-access:
+    addr: 22
+    domain: '<mbid>.mosquitobusters.ngrok.app'
+    proto: tcp
