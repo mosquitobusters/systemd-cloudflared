@@ -10,4 +10,4 @@ tunnels:
   ssh-access:
     addr: 22
     proto: tcp
-    remote_addr: 3.tcp.eu.ngrok.io:28797
+    remote_addr: 3.tcp.us.ngrok.io:28797
