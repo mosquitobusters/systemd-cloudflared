@@ -3,10 +3,10 @@ authtoken: <add_your_token_here>
 tunnels:
   website:
     addr: 5000
-    subdomain: mosquitobusters
+    domain: *.mosquitobusters.ngrok.io
     proto: http
 
   ssh-access:
     addr: 22
     proto: tcp
-    remote_addr: 3.tcp.eu.ngrok.io:28797
+#    remote_addr: 3.tcp.eu.ngrok.io:28797
