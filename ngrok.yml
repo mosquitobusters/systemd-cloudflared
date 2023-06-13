@@ -1,9 +1,9 @@
 version: "2"
 authtoken: <add_your_token_here>
+region: us
 tunnels:
   website:
     addr: 5000
-    region: us
     domain: mosquitobusters.ngrok.io
     proto: http
 
