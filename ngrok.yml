@@ -6,7 +6,7 @@ tunnels:
     domain: *.mosquitobusters.ngrok.io
     proto: http
 
-#  ssh-access:
-#    addr: 22
-#    proto: tcp
-#    remote_addr: 3.tcp.eu.ngrok.io:28797
+  ssh-access:
+    addr: 22
+    proto: tcp
+    remote_addr: 3.tcp.eu.ngrok.io:28797
