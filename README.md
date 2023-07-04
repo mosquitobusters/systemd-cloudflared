@@ -2,10 +2,11 @@
 
 1. Clone this repository to the target machine (eg: Raspberry Pi)
 2. Run `sudo ./setup.sh` to download and set up cloudflared
-3. 
-4. Run `sudo ./install.sh <your_authtoken>`, replace `<your_authtoken>` with the token you've obtained before from ngrok website.
+3. Run `sudo ./login.sh` and copy link for authorization
+4. Run `sudo ./install.sh <mb_id>`, replace `<md_id>` with the ID from the unit
 5. You're good to go!
 
-## Acknowledgements
 
-Ngrok architecture auto detection was contributed by [David Eleazar](https://github.com/elzdave).
+## Uninstallation
+1. Run `sudo ./uninstall.sh <mb_id`, replace `<md_id>` with the ID from the unit
+2. That's it!
