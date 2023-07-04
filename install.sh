@@ -21,8 +21,9 @@ cp config.yml /root/.cloudflared/config.yml
 sed -i "s/<tunnel_id>/$ID/g" /root/.cloudflared/config.yml
 
 #Install service:
-sudo rm -f /etc/cloudflared/config.yml
-sudo cloudflared --config /root/.cloudflared/config.yml service install
-sudo systemctl start cloudflared
+rm -f /etc/cloudflared/config.yml
+cloudflared --config /root/.cloudflared/config.yml service install
+systemctl enable cloudflared
+systemctl start cloudflared
 echo "Done installing cloudflare service"
 exit 0
