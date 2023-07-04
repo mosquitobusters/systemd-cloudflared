@@ -14,8 +14,8 @@ cloudflared tunnel create $1
 cloudflared tunnel route dns -f $1 $1.mosquitobusters.site
 
 #Setup config:
-ID=$(cloudflared tunnel info mb02 | grep -E --only-matching -e "\b(([0-9a-f]+\-)+[0-9a-f]+)\b" --line-buffered | head -1)
-echo "$ID"
+ID=$(cloudflared tunnel info $1 | grep -E --only-matching -e "\b(([0-9a-f]+\-)+[0-9a-f]+)\b" --line-buffered | head -1)
+echo "Tunnel ID: $ID"
 
 cp config.yml /root/.cloudflared/config.yml
 sed -i "s/<tunnel_id>/$ID/g" /root/.cloudflared/config.yml
