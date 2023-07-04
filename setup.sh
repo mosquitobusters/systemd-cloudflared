@@ -13,11 +13,6 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-if [ -z "$1" ]; then
-    echo "./setup.sh"
-    exit 1
-fi
-
 echo "Downloading cloudflared . . ."
 wget $DOWNLOAD_URL
 sudo tar -xvzf $ARCHIVE
