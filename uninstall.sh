@@ -5,7 +5,11 @@ if (( $EUID != 0 )); then
     exit 1
 fi
 
-systemctl stop ngrok.service
-systemctl disable ngrok.service
-rm /lib/systemd/system/ngrok.service
-rm -rf /opt/ngrok
+if [ -z "$1" ]; then
+    echo "./uninstall.sh <mb_id>"
+    exit 1
+fi
+
+cloudflared service uninstall
+cloudflared tunnel cleanup $1
+cloudflared tunnel delete $1
