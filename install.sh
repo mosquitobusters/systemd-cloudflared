@@ -10,6 +10,9 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+FOLDER=$(dirname "$0")
+CONFIG="$FOLDER/config.yml"
+
 cloudflared tunnel create $1
 cloudflared tunnel route dns --overwrite-dns $1 $1.mosquitobusters.site
 
@@ -17,7 +20,7 @@ cloudflared tunnel route dns --overwrite-dns $1 $1.mosquitobusters.site
 ID=$(cloudflared tunnel info $1 | grep -E --only-matching -e "\b(([0-9a-f]+\-)+[0-9a-f]+)\b" --line-buffered | head -1)
 echo "Tunnel ID: $ID"
 
-cp ./config.yml /root/.cloudflared/config.yml
+cp $CONFIG /root/.cloudflared/config.yml
 sed -i "s/<tunnel_id>/$ID/g" /root/.cloudflared/config.yml
 
 #Install service:
