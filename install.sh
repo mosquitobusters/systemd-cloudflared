@@ -11,7 +11,7 @@ if [ -z "$1" ]; then
 fi
 
 cloudflared tunnel create $1
-cloudflared tunnel route dns -f $1 $1.mosquitobusters.site
+cloudflared tunnel route dns --overwrite-dns $1 $1.mosquitobusters.site
 
 #Setup config:
 ID=$(cloudflared tunnel info $1 | grep -E --only-matching -e "\b(([0-9a-f]+\-)+[0-9a-f]+)\b" --line-buffered | head -1)
